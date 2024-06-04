@@ -1,0 +1,98 @@
+<style>
+  .battery_container {
+    display: flex; /* Arrange child elements side-by-side */
+    align-items: center; /* Center items vertically */
+    height: 400px; /* Fixed height for the container */
+    margin: 0; /* Remove default margin */
+  }
+
+  .battery_text {
+    text-align: justify; /* Justify text within this container */
+  }
+
+  .label_container {
+    display: flex; /* Arrange child elements side-by-side */
+    justify-content: space-around; /* Distribute space evenly around the labels */
+  }
+
+  .label {
+    padding: 5px 20px; /* Padding for the labels */
+    border-radius: 50px; /* Rounded corners */
+    border: solid 2px #375BA7; /* Border color and thickness */
+    margin-top: 30px; /* Space above the labels */
+  }
+
+  .battery_picture_container {
+    width: 50%; /* Half the width of the container */
+    height: 400px; /* Fixed height */
+    background-image: url("https://batconnect.fr/wp-content/uploads/2024/05/Duo-pack-batteries.png"); /* Background image */
+    background-size: cover; /* Cover the container */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* No repetition of the image */
+  }
+
+  .battery_img_container {
+    display: none; /* Hidden by default */
+    width: 50%; /* Half the width of the container */
+    height: 400px; /* Fixed height */
+  }
+
+  .battery_description {
+    width: 50%; /* Half the width of the container */
+  }
+
+  @media(max-width: 980px) {
+    .battery_container {
+      flex-direction: column; /* Stack elements vertically */
+      height: auto; /* Adjust height automatically */
+    }
+
+    .battery_description, .battery_picture_container, .battery_img_container {
+      width: 100%; /* Full width */
+      height: auto; /* Adjust height automatically */
+    }
+
+    .battery_text {
+      margin-top: 20px; /* Space above the text */
+    }
+
+    .battery_picture_container {
+      margin-top: 20px; /* Space above the picture container */
+      height: 400px; /* Fixed height */
+    }
+  }
+
+  @media(max-width: 600px) {
+    .battery_picture_container {
+      display: none; /* Hide the picture container */
+    }
+    .battery_img_container {
+      display: block; /* Show the img container */
+    }
+  }
+</style>
+  
+<div class="battery_container">
+  <div class="battery_description">
+    <div class="battery_text">
+      <h2 style="margin-bottom: 20px">
+        Nos batteries connectées
+      </h2>
+      <p style="margin-bottom: 20px">
+        Nous avons conçu chaque aspect de nos batteries avec soin pour offrir des performances optimales. Nos batteries de <strong>conception </strong>française sont adaptable sur tout type de véhicules légers. 
+      </p>
+      <p>
+        Avec notre <strong>support local dédié</strong>, vous bénéficiez d'une assistance rapide et efficace.
+      </p>
+    </div>
+    <div class="label_container">
+      <div class="label">
+        48 V - 50 Ah
+      </div>
+      <div class="label">
+        48 V - 105 Ah
+      </div>
+    </div>
+  </div>	 
+  <div class="battery_img_container"><img src="https://batconnect.fr/wp-content/uploads/2024/05/Duo-pack-batteries.png"></div>
+</div>
