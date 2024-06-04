@@ -1,0 +1,85 @@
+<style>
+    .domaine_container{
+      display: flex;
+      gap: 2%;
+      flex-wrap: wrap;
+    }
+    
+    .choix_domaine {
+      position: relative;
+      height: 265px;
+      padding: 50px;
+      width: 32%;
+      margin-bottom:30px
+    }
+  
+    .choix_domaine::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("https://batconnect.fr/wp-content/uploads/2023/08/voiturettte-scaled-e1691160887432.jpg");
+      background-size: cover;
+      filter: blur(0px) brightness(100%); 
+      transition: filter 0.5s; 
+      z-index: -1; 
+    }
+  
+    .choix_domaine h3, .choix_domaine p {
+      opacity: 0;
+      color: #FFFFFF;
+      transition: opacity 0.3s ease; 
+      position: relative; 
+      z-index: 1; 
+    }
+  
+    .choix_domaine:hover::before {
+      filter: blur(1.5px) brightness(50%);
+    }
+  
+    .choix_domaine:hover h3, .choix_domaine:hover p {
+      opacity: 1;
+    }
+    
+    @media(max-width: 980px){
+      .choix_domaine {
+          width: 49%;
+        }
+    }
+    
+    @media(max-width: 750px){
+      .choix_domaine{
+        width: 100%;
+      }
+    }
+  </style>
+  
+  <div class="domaine_container">
+    <div class="choix_domaine">
+        <h3>Voiturettes</h3>
+        <p>Lorem ipsum</p>
+      </div>
+    <div class="choix_domaine">
+        <h3>Voiturettes</h3>
+        <p>Lorem ipsum</p>
+      </div>
+    <div class="choix_domaine">
+        <h3>Voiturettes</h3>
+        <p>Lorem ipsum</p>
+      </div>
+    <div class="choix_domaine">
+        <h3>Voiturettes</h3>
+        <p>Lorem ipsum</p>
+      </div>
+    <div class="choix_domaine">
+        <h3>Voiturettes</h3>
+        <p>Lorem ipsum</p>
+      </div>
+    <div class="choix_domaine">
+        <h3>Voiturettes</h3>
+        <p>Lorem ipsum</p>
+      </div>
+  </div>
+  

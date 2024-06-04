@@ -130,6 +130,7 @@ images.forEach((image) => { /* Pour chaque image, on ajoute un événement sur l
         moveImagesRight();
     });
 });
+
 updateArrowOpacity(); /* Mise à jour de l'opacité des flèches */
 if (images.length > 0) { /* Si le tableau d'image n'est pas vide, on met à jour la marge de l'image qui vient se placer au milieu ou tout à gauche en fonction de la largeur écran */
     updateImageMargin(images[0]);
