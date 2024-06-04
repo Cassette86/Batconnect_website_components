@@ -1,0 +1,57 @@
+.tableau {
+  border-radius: 10px; /* Rounded corners for the table */
+  border: solid 2px #ebebeb; /* Light gray border */
+}
+
+.header {
+  display: flex; /* Arrange header sections side-by-side */
+  background: #ebebeb; /* Light gray background for the header */
+  margin: 0; /* Remove default margin */
+}
+
+.header_section {
+  width: 50%; /* Each header section takes up 50% width */
+  padding: 10px 20px; /* Padding inside each header section */
+  transition: box-shadow 0.3s ease; /* Smooth transition for box-shadow */
+}
+
+.contenu_description, .spec_part {
+  opacity: 1; /* Fully visible */
+  transition: opacity 0.2s ease, visibility 0.2s ease; /* Smooth transitions for opacity and visibility */
+}
+
+.contenu_description {
+  text-align: justify; /* Justify text alignment */
+  padding: 20px; /* Padding inside the description content */
+}
+
+.hidden {
+  opacity: 0; /* Fully invisible */
+  visibility: hidden; /* Hidden from layout */
+}
+
+.visible {
+  opacity: 1; /* Fully visible */
+  visibility: visible; /* Visible in layout */
+}
+
+.spec_part {
+  display: none; /* Initially hidden */
+}
+
+.contenu_colonne {
+  display: flex; /* Arrange columns side-by-side */
+  width: 100%; /* Full width */
+  padding: 10px 20px; /* Padding inside the columns */
+}
+
+.contenu_spec {
+  width: 33.3333%; /* Each column takes up a third of the width */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.contenu_spec p {
+  border-bottom: solid 1px #ebebeb; /* Light gray bottom border for paragraphs */
+  margin: 0; /* Remove default margin */
+  padding: 10px 0; /* Padding inside each paragraph */
+}
