@@ -1,0 +1,52 @@
+<style>
+    .buttons {
+        display: flex; /* Arrange child elements side-by-side */
+    }
+
+    /* Style de la colonne de gauche */
+    .button_column_left {
+        flex: 1; /* Take up equal space with the right column */
+        display: flex; /* Use flexbox for internal layout */
+        justify-content: flex-end; /* Align items to the end (right) */
+        margin-left: 2.5%; /* Left margin */
+        margin-right: 2.5%; /* Right margin */
+    }
+
+    /* Style de la colonne de droite */
+    .button_column_right {
+        flex: 1; /* Take up equal space with the left column */
+        display: flex; /* Use flexbox for internal layout */
+        justify-content: flex-start; /* Align items to the start (left) */
+        margin-left: 2.5%; /* Left margin */
+        margin-right: 2.5%; /* Right margin */
+    }
+
+    /* Responsive design: Stacks buttons vertically on screens 600px or narrower */
+    @media screen and (max-width: 600px) {
+        .buttons {
+            flex-direction: column; /* Stack elements vertically */
+        }
+        .button_column_right {
+            flex: auto; /* Auto width */
+            justify-content: center; /* Center the button */
+        }
+        .button_column_left {
+            flex: auto; /* Auto width */
+            justify-content: center; /* Center the button */
+            margin-bottom: 20px; /* Space below the button */
+        }
+    }
+</style>
+
+<div class="buttons">
+    <div class="button_column_left">
+        <button class="bouton_bat_encadre">
+            Demander un devis
+        </button>
+    </div>
+    <div class="button_column_right">
+        <button class="bouton_bat_encadre">
+            Télécharger la datasheet
+        </button>
+    </div>
+</div>
