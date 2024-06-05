@@ -1,0 +1,130 @@
+<style>
+    .buttons {
+        display: flex;
+    }
+    
+    /* Style de la colonne de gauche*/
+    .button_column_left {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end; 
+        margin-left:2.5%;
+        margin-right: 2.5%;
+    }
+    /* Style de la colonne de droite*/
+    .button_column_right {
+        flex: 1;
+        display: flex;
+        justify-content: flex-start; 
+        margin-left:2.5%;
+        margin-right: 2.5%;
+    }
+  
+    .bouton_bat_encadre{
+        margin-right: 20px;
+        position: relative;
+        background-color: transparent;
+        color: #4E8BA5;
+        padding: 10px 20px;
+        border: 2px solid #4E8BA5;
+        border-radius: 5px;
+        font-size: 16px;
+        transition: all 0.3s ease;
+        box-sizing: border-box;
+        margin-right: 20px;
+        margin-bottom: 0px;
+    }
+    
+    /* Style du bouton encadré effet transition vers HOVER */
+    .bouton_bat_encadre::after {
+        content: url('https://batconnect.fr/wp-content/uploads/2024/05/Vector.png');
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 65%;
+        right: 10px;
+        transform: translateY(-70%);
+        opacity: 0;
+        transition: opacity 0.4s ease;
+    }
+      
+    /* Style du bouton encadré HOVER */
+    .bouton_bat_encadre:hover {
+        background-color: #ebebeb;
+        padding: 10px 36px 10px 20px;
+        border: 2px solid #ebebeb;
+    }
+      
+    /* Apparition de la flèche pour le hover */
+    .bouton_bat_encadre:hover::after {
+        opacity: 1;
+    }
+  
+          /*Style du bouton simple*/
+    .bouton_bat_simple{
+        position: relative;
+        background-color: transparent;
+        color: #4E8BA5;
+        padding: 10px 0px;
+        border: 2px solid transparent;
+        border-radius: 5px;
+        font-size: 16px;
+        transition: all 0.3s ease;
+        box-sizing: border-box;
+    }
+    
+    /*Style du bouton simple --> transition vers le hover*/
+    .bouton_bat_simple::after {
+        content: url('https://batconnect.fr/wp-content/uploads/2024/05/Vector.png');
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 65%;
+        right: 10px;
+        transform: translateY(-70%);
+        opacity: 0;
+        transition: opacity 0.4s ease;
+    }
+    
+    /*Style du bouton simple --> hover*/
+    .bouton_bat_simple:hover {
+        background-color: transparent;
+        padding: 10px 36px 10px 20px;
+        border: 2px solid transparent;
+    }
+    
+    /*Apparition de la flèche pour le hover*/
+    .bouton_bat_simple:hover::after {
+        opacity: 1;
+    }
+  
+    /* Fonction pour rendre le composant responsive. Ici, à la taille téléphone, les boutons se mettent l'un sur l'autre*/
+    @media screen and (max-width: 600px) {
+        .buttons {
+          flex-direction: column;
+        }
+        .button_column_right {
+          flex: auto;
+          justify-content: center;
+        }
+        .button_column_left {
+          flex: auto;
+          justify-content: center;
+          margin-bottom : 20px;
+        }
+    }
+    
+</style>
+  
+<div class='buttons'>
+    <div class='button_column_left'>
+        <button class='bouton_bat_encadre'>
+            Demander un devis
+        </button>
+    </div>
+    <div class='button_column_right'>
+        <button class='bouton_bat_simple'>
+            Contactez nous
+        </button>
+    </div>
+</div>
