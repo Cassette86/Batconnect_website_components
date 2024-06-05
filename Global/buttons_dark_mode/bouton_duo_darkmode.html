@@ -1,0 +1,132 @@
+<style>
+    .buttons {
+        display: flex;
+    }
+    
+    /* Style de la colonne de gauche*/
+    .button_column_left {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end; 
+        margin-left:2.5%;
+        margin-right: 2.5%;
+    }
+    /* Style de la colonne de droite*/
+    .button_column_right {
+        flex: 1;
+        display: flex;
+        justify-content: flex-start; 
+        margin-left:2.5%;
+        margin-right: 2.5%;
+    }
+  
+    .bouton_bat_encadre_clear_V2{
+        margin-right: 20px;
+        position: relative;
+        background-color: transparent;
+        color: #F9FBFE;
+        padding: 10px 20px;
+        border: 2px solid #F9FBFE;
+        border-radius: 5px;
+        font-size: 16px;
+        transition: all 0.3s ease;
+        box-sizing: border-box;
+        margin-right: 20px;
+        margin-bottom: 0px;
+        font-weight: 500;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+    
+    .bouton_bat_encadre_clear_V2::after {
+        content: url('https://batconnect.fr/wp-content/uploads/2024/05/Vector_white.png');
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 65%;
+        right: 10px;
+        transform: translateY(-70%);
+        opacity: 0;
+        transition: opacity 0.4s ease;
+    }
+    
+  .bouton_bat_encadre_clear_V2:hover {
+        padding: 10px 36px 10px 20px;
+        background-image: radial-gradient(at top, rgba(255, 255, 255, 0.3),rgba(255, 255, 255, 0.01)); 
+        border: 2px solid rgba(255, 255, 255, 0.3); /*effet transparent*/
+        backdrop-filter: blur(5px); /*effet de flou*/
+        -webkit-backdrop-filter: blur(10px); /*effet de flou*/
+     
+  }
+    
+    .bouton_bat_encadre_clear_V2:hover::after {
+        opacity: 1;
+    }
+  
+    .bouton_bat_simple_clear{
+        position: relative;
+        background-color: transparent;
+        color: #F9FBFE;
+        padding: 10px 0px;
+        border: 2px solid transparent;
+        border-radius: 5px;
+        font-size: 16px;
+        transition: all 0.3s ease;
+        box-sizing: border-box;
+        font-weight: 500;
+        margin-left:0px;
+        margin-right: 20px;
+    }
+    
+    .bouton_bat_simple_clear::after {
+        content: url('https://batconnect.fr/wp-content/uploads/2024/05/Vector_white.png');
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 65%;
+        right: 10px;
+        transform: translateY(-70%);
+        opacity: 0;
+        transition: opacity 0.4s ease;
+    }
+    
+    .bouton_bat_simple_clear:hover {
+        background-color: transparent;
+        padding: 10px 36px 10px 20px;
+        border: 2px solid transparent;
+    }
+    
+    .bouton_bat_simple_clear:hover::after {
+        opacity: 1;
+    }
+    
+    /* Fonction pour rendre le composant responsive. Ici, à la taille téléphone, les boutons se mettent l'un sur l'autre*/
+    @media screen and (max-width: 600px) {
+        .buttons {
+            flex-direction: column;
+        }
+        .button_column_right {
+            flex: auto;
+            justify-content: center;
+        }
+        .button_column_left {
+            flex: auto;
+            justify-content: center;
+            margin-bottom : 20px;
+        }
+    }
+</style>
+  
+<div class='buttons'>
+    <div class='button_column_left'>
+        <button class='bouton_bat_encadre_clear_V2'>
+            Demander un devis
+        </button>
+    </div>
+    <div class='button_column_right'>
+        <button class='bouton_bat_simple_clear'>
+            Contactez nous
+        </button>
+    </div>
+</div>
+  

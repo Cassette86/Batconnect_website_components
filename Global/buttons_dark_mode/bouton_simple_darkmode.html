@@ -1,0 +1,50 @@
+<style>
+    .bouton_bat {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: justify;
+    }
+    
+    .bouton_bat_simple_clear{
+        position: relative;
+        background-color: transparent;
+        color: #F9FBFE;
+        padding: 10px 0px;
+        border: 2px solid transparent;
+        border-radius: 5px;
+        font-size: 16px;
+        transition: all 0.3s ease;
+        box-sizing: border-box;
+        font-weight: 500;
+        margin-left:0px;
+        margin-right: 20px;
+    }
+    
+    .bouton_bat_simple_clear::after {
+        content: url('https://batconnect.fr/wp-content/uploads/2024/05/Vector_white.png');
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 65%;
+        right: 10px;
+        transform: translateY(-70%);
+        opacity: 0;
+        transition: opacity 0.4s ease;
+    }
+    
+    .bouton_bat_simple_clear:hover {
+        background-color: transparent;
+        padding: 10px 36px 10px 20px;
+        border: 2px solid transparent;
+    }
+    
+    .bouton_bat_simple_clear:hover::after {
+        opacity: 1;
+    }
+</style>
+  
+<div class="bouton_bat">
+    <button class="bouton_bat_simple_clear">Contactez nous</button>
+</div>
