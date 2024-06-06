@@ -1,21 +1,24 @@
 <style>
+    /* Container for photos */
     .photos {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
+        display: flex; /* Use Flexbox for layout */
+        justify-content: space-between; /* Distribute space evenly between images */
+        flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
     }
 
+    /* Style for individual images */
     .photos img {
-        width: 22.75%;
-        height: auto;
-        margin: 0;
-        padding: 0;
+        width: 22.75%; /* Set width of images to take up about a quarter of the container's width */
+        height: auto; /* Maintain aspect ratio */
+        margin: 0; /* Remove default margin */
+        padding: 0; /* Remove default padding */
     }
-  
-  @media screen and (max-width: 600px) {
+
+    /* Media query for screens 600px wide or less */
+    @media screen and (max-width: 600px) {
         .photos img {
-            width: 48%; 
-                margin-bottom: 4%
+            width: 48%; /* Make images take up about half the width on smaller screens */
+            margin-bottom: 4%; /* Add space between rows */
         }
     }
 </style>
