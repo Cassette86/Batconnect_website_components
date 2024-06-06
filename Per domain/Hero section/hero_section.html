@@ -1,105 +1,129 @@
 <style>
-    .hero_container {
-      position: relative;
-      overflow: hidden; /* Ensure content does not overflow */
+  /* Main container for the hero section */
+  .hero_container {
+    position: relative;
+    overflow: hidden; /* Ensure content does not overflow */
+  }
+
+  /* Style for paragraphs in the hero container */
+  .hero_container p {
+    text-align: justify; /* Justify text */
+  }
+
+  /* Style for the image in the hero container */
+  .hero_container img {
+    position: absolute;
+    right: 0; /* Align the image to the right */
+    height: 100%; /* Set image height to 100% of the container */
+    width: 100%; /* Set image width to 100% of the container */
+    object-fit: cover; /* Cover the container without distortion */
+    object-position: right; /* Align the image to the right */
+  }
+
+  /* Container for the content in the hero section */
+  .hero_content {
+    position: relative;
+    padding: 0px 10%; /* Padding on left and right */
+    z-index: 1; /* Ensure content is above the image */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  }
+
+  /* First part of the hero content */
+  .hero_content_part1 {
+    width: 70%; /* Set width to 70% */
+  }
+
+  /* Second part of the hero content */
+  .hero_content_part2 {
+    width: 60%; /* Set width to 60% */
+  }
+
+  /* Margin bottom for headings and paragraphs in part 1 and part 2 */
+  .hero_content_part1 h1, .hero_content_part1 p, .hero_content_part2 p {
+    margin-bottom: 50px; /* Set bottom margin to 50px */
+  }
+
+  /* Container for buttons */
+  .buttons {
+    display: flex;
+    justify-content: space-between; /* Space buttons evenly */
+  }
+
+  /* Style for buttons */
+  .buttons button {
+    padding: 10px 20px; /* Padding inside the buttons */
+    font-size: 16px; /* Font size of the button text */
+  }
+
+  /* Media query for screens smaller than 1100px */
+  @media (max-width: 1100px) {
+    .hero_content h1, .hero_content p {
+      margin-bottom: 10px; /* Reduce bottom margin to 10px */
     }
-    .hero_container p{
-      text-align: justify
+    .hero_container img {
+      right: -2%; /* Move image slightly to the left */
     }
-    
-      .hero_container img {
-      position: absolute;
-      right: 0;
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-      object-position: right; /* Align the image to the right */
+  }
+
+  /* Media query for screens smaller than 880px */
+  @media (max-width: 880px) {
+    .hero_container img {
+      right: -10%; /* Move image further to the left */
     }
-    
-    .hero_content{
-      position:relative;
-      padding: 0px 10%;
-      z-index: 1;
-      box-sizing: border-box;
+  }
+
+  /* Media query for screens smaller than 800px */
+  @media (max-width: 800px) {
+    .hero_container img {
+      right: -20%; /* Move image even further to the left */
     }
-    
+  }
+
+  /* Media query for screens smaller than 720px */
+  @media (max-width: 720px) {
+    .hero_container img {
+      display: none; /* Hide the image */
+    }
     .hero_content_part1 {
-      width: 70%;
+      width: 100%; /* Set width to 100% */
     }
     .hero_content_part2 {
-      width: 60%;
+      width: 100%; /* Set width to 100% */
     }
-    
-    .hero_content_part1 h1, .hero_content_part1 p, .hero_content_part2 p {
-      margin-bottom: 50px;
+    .hero_content h1, .hero_content p {
+      margin-bottom: 20px; /* Adjust bottom margin to 20px */
     }
-    
-    .buttons {
-      display: flex;
-      justify-content: space-between;
-    }
-  
-    .buttons button {
-      padding: 10px 20px;
-      font-size: 16px;
-    }
-    
-    @media(max-width: 1100px){
-      .hero_content h1, .hero_content p {
-          margin-bottom: 10px;
-        }
-      .hero_container img{
-        right: -2%;
-      }
-    }
-    
-    @media(max-width: 880px){
-      .hero_container img{
-        right: -10%;
-      }
-    }
-    
-    @media(max-width: 800px){
-      .hero_container img{
-        right: -20%;
-      }
-    }
-    
-    @media(max-width: 720px){
-      .hero_container img {
-        display: none;
-      }
-      .hero_content_part1 {
-          width: 100%;
-        }
-        .hero_content_part2 {
-          width: 100%;
-        }
-      .hero_content h1, .hero_content p {
-          margin-bottom: 20px;
-        }
-    }
+}
   </style>
   
-  <div class="hero_container">
-    <img src="https://batconnect.fr/wp-content/uploads/2024/05/Frame-102.png" alt="Golfettes et quadricycles">
-    <div class="hero_content">
-      <div class="hero_content_part1">
-          <h1>Golfettes et quadricycles</h1>
-          <p>Nos batteries ont été conçues pour s’adapter facilement à tous les types de 		<strong>véhicules légers</strong>, quel que soit leur environnement : <strong>golf, camping, site industriel, hôtellerie...</strong></p>
+<!-- Conteneur principal pour la section héro -->
+<div class="hero_container">
+  <!-- Image de fond pour la section héro -->
+  <img src="https://batconnect.fr/wp-content/uploads/2024/05/Frame-102.png" alt="Golfettes et quadricycles">
+  <!-- Contenu de la section héro -->
+  <div class="hero_content">
+    <!-- Première partie du contenu héro -->
+    <div class="hero_content_part1">
+      <!-- Titre de la section héro -->
+      <h1>Golfettes et quadricycles</h1>
+      <!-- Paragraphe de description -->
+      <p>Nos batteries ont été conçues pour s’adapter facilement à tous les types de <strong>véhicules légers</strong>, quel que soit leur environnement : <strong>golf, camping, site industriel, hôtellerie...</strong></p>
+    </div>
+    <!-- Deuxième partie du contenu héro -->
+    <div class="hero_content_part2">
+      <!-- Paragraphe supplémentaire -->
+      <p>Un choix de deux packs d’autonomie et de puissance différentes vous permet de bénéficier d’un équipement parfaitement <strong>adapté à vos usages</strong>, qu’ils soient <strong>intensifs ou modérés</strong>.</p>
+      <!-- Conteneur pour les boutons -->
+      <div class="buttons">
+        <!-- Colonne pour le premier bouton -->
+        <div class="button_column_left">
+          <button class="bouton_bat_encadre">Demander un devis</button>
         </div>
-        <div class="hero_content_part2">
-          <p>Un choix de deux packs d’autonomie et de puissance différentes vous permet de bénéficier d’un équipement parfaitement <strong>adapté à vos usages</strong>, qu’ils soient <strong>intensifs ou modérés</strong>.
-          </p>
-          <div class="buttons">
-            <div class="button_column_left">
-              <button class="bouton_bat_encadre">Demander un devis</button>
-            </div>
-            <div class="button_column_right">
-              <button class="bouton_bat_simple">Contactez nous</button>
-            </div>
-          </div>
+        <!-- Colonne pour le deuxième bouton -->
+        <div class="button_column_right">
+          <button class="bouton_bat_simple">Contactez nous</button>
         </div>
+      </div>
     </div>
   </div>
-  
+</div>
