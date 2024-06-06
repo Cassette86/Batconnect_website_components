@@ -1,0 +1,100 @@
+<style>
+    /* Conteneur principal pour le composant personnalisé */
+    .custom-component {
+        display: flex;
+        flex-direction: column; /* Aligne les enfants verticalement */
+    }
+    
+    /* Section de texte avec alignement justifié */
+    .text-section {
+        display: flex; 
+        align-items: flex-start; /* Aligne le contenu en haut */
+        text-align: justify; /* Justifie le texte */
+    }
+    
+    /* Ligne contenant une icône et du texte */
+    .icon-text-line {
+        display: flex; 
+        align-items: flex-start; /* Aligne le contenu en haut */
+        margin-top: 40px; /* Marge supérieure pour espacer les lignes */
+        text-align: justify; /* Justifie le texte */
+    }
+    
+    /* Espacement du texte à côté de l'icône */
+    .icon-text-spacing {
+        margin-left: 20px; /* Marge à gauche de 20px */
+    }
+    
+    /* Espacement de l'icône */
+    .icon-spacing {
+        margin-right: 20px; /* Marge à droite de 20px */
+    }
+    
+    /* Dimensions de l'image de l'icône */
+    .icon-image img {
+        height: 20px; /* Hauteur de 20px */
+        width: 40px; /* Largeur de 40px */
+    }
+    
+    /* Assure que les images ne dépassent pas la largeur de leur conteneur */
+    .responsive-image img {
+        max-width: 100%; /* Largeur maximale de 100% du conteneur */
+        height: auto; /* Hauteur automatique pour maintenir le ratio */
+    }
+</style>
+  
+<!-- Container for the custom component -->
+<div class="custom-component">
+    <!-- Justified text paragraph -->
+    <div class="text-section">
+        <p style="text-align: justify;">Lorem ipsum dolor sit</p>
+    </div>
+    <!-- Justified heading -->
+    <div class="text-section">
+        <h2><strong>Lorem ipsum dolor sit</strong></h2>
+    </div>
+    <!-- Justified text block -->
+    <div class="text-section">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </div>
+    <!-- Line with icon and text -->
+    <div class="icon-text-line">
+        <!-- Icon image -->
+        <div class="icon-spacing">
+             <img src="https://batconnect.fr/wp-content/uploads/2024/04/app-window.png" alt="Batconnect logo" />
+        </div>
+        <!-- Text next to the icon -->
+        <div class="icon-text-spacing">
+            <p style="margin-bottom: 0;"><strong>Lorem ipsum</strong> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+    </div>
+    <!-- Repeat for additional lines with icons and text -->
+    <div class="icon-text-line">
+        <div class="icon-spacing">
+             <img src="https://batconnect.fr/wp-content/uploads/2024/04/app-window.png" alt="Batconnect logo" />
+        </div>
+        <div class="icon-text-spacing">
+            <p style="margin-bottom: 0px;"><strong>Lorem ipsum</strong> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+    </div>
+    <div class="icon-text-line">
+        <div class="icon-spacing">
+             <img src="https://batconnect.fr/wp-content/uploads/2024/04/app-window.png" alt="Batconnect logo" />
+        </div>
+        <div class="icon-text-spacing">
+            <p style="margin-bottom: 0px;"><strong>Lorem ipsum</strong> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+    </div>
+    <div class="icon-text-line">
+        <div class="icon-spacing">
+             <img src="https://batconnect.fr/wp-content/uploads/2024/04/app-window.png" alt="Batconnect logo" />
+        </div>
+        <div class="icon-text-spacing">
+            <p style="margin-bottom: 0px;"><strong>Lorem ipsum</strong> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+    </div>
+    <!-- Additional justified text paragraph -->
+    <div class="text-section">
+        <p style="margin-top: 20px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+</div>
