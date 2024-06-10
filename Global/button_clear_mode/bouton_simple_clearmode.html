@@ -1,52 +1,52 @@
 <style>
-    /* Style du container */
+    /* Container styling */
     .bouton_bat {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        text-align: justify;
+        text-align: justify; /* Justify text alignment */
     }
     
-        /*Style du bouton simple*/
+    /* Simple button styling */
     .bouton_bat_simple{
-        position: relative;
-        background-color: transparent;
-        color: #4E8BA5;
-        padding: 10px 0px;
-        border: 2px solid transparent;
-        border-radius: 5px;
-        font-size: 16px;
-        transition: all 0.3s ease;
-        box-sizing: border-box;
+        position: relative; /* Needed for positioning the pseudo-element */
+        background-color: transparent; /* Transparent background */
+        color: #375BA7; /* Text color */
+        padding: 10px 0px; /* Padding for top/bottom */
+        border: 2px solid transparent; /* Transparent border */
+        border-radius: 5px; /* Rounded corners */
+        font-size: 16px; /* Font size */
+        transition: all 0.3s ease; /* Smooth transition for all properties */
+        box-sizing: border-box; /* Include padding and border in element's total width and height */
     }
     
-    /*Style du bouton simple --> transition vers le hover*/
+    /* Transition to hover state */
     .bouton_bat_simple::after {
-        content: url('https://batconnect.fr/wp-content/uploads/2024/05/Vector.png');
-        width: 20px;
-        height: 20px;
-        position: absolute;
-        top: 65%;
-        right: 10px;
-        transform: translateY(-70%);
-        opacity: 0;
-        transition: opacity 0.4s ease;
+        content: url('https://batconnect.fr/wp-content/uploads/2024/05/Vector.png'); /* Image for pseudo-element */
+        width: 20px; /* Width of the image */
+        height: 20px; /* Height of the image */
+        position: absolute; /* Positioning relative to the button */
+        top: 65%; /* Position from the top */
+        right: 10px; /* Position from the right */
+        transform: translateY(-70%); /* Adjust vertical positioning */
+        opacity: 0; /* Initially invisible */
+        transition: opacity 0.4s ease; /* Smooth transition for opacity */
     }
     
-    /*Style du bouton simple --> hover*/
+    /* Hover state styling */
     .bouton_bat_simple:hover {
-        background-color: transparent;
-        padding: 10px 36px 10px 20px;
-        border: 2px solid transparent;
+        background-color: transparent; /* Keep background transparent */
+        padding: 10px 36px 10px 20px; /* Adjust padding to make room for the image */
+        border: 2px solid transparent; /* Keep border transparent */
     }
     
-    /*Apparition de la flèche pour le hover*/
+    /* Image appearance on hover */
     .bouton_bat_simple:hover::after {
-        opacity: 1;
+        opacity: 1; /* Make the image visible */
     }
 </style>
   
 <div class=".bouton_bat_solo">
-    <button class="bouton_bat_simple">Contactez nous</button>
+    <button class="bouton_bat_simple">Contactez nous</button> <!-- Simple button with text -->
 </div>
