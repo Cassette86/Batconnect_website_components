@@ -9,13 +9,13 @@
     }
     
     /* Style du bouton encadré par défaut */
-    .bouton_bat_encadre_solo{
+    .bouton_bat_encadre{
         margin-right: 20px;
         position: relative;
         background-color: transparent;
-        color: #4E8BA5;
+        color: #375BA7;
         padding: 10px 20px;
-        border: 2px solid #4E8BA5;
+        border: 2px solid #375BA7;
         border-radius: 5px;
         font-size: 16px;
         transition: all 0.3s ease;
@@ -25,7 +25,7 @@
     }
   
     /* Style du bouton encadré effet transition vers HOVER */
-    .bouton_bat_encadre_solo::after {
+    .bouton_bat_encadre::after {
         content: url('https://batconnect.fr/wp-content/uploads/2024/05/Vector.png');
         width: 20px;
         height: 20px;
@@ -38,19 +38,19 @@
     }
     
     /* Style du bouton encadré HOVER */
-    .bouton_bat_encadre_solo:hover {
+    .bouton_bat_encadre:hover {
         background-color: #ebebeb;
         padding: 10px 36px 10px 20px;
         border: 2px solid #ebebeb;
     }
     
     /* Apparition de la flèche pour le hover */
-    .bouton_bat_encadre_solo:hover::after {
+    .bouton_bat_encadre:hover::after {
         opacity: 1;
     }
 </style>
 
 <div class="bouton_bat_solo">
-    <button class="bouton_bat_encadre_solo">Demander un devis</button>
+    <button class="bouton_bat_encadre">Postuler</button>
 </div>
   
