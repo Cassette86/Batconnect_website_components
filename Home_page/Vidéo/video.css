@@ -1,0 +1,31 @@
+/* Définir le style pour le conteneur principal de la vidéo */
+.video_container_container {
+	display: flex; /* Utiliser flexbox pour aligner les éléments enfants */
+	justify-content: center; /* Centrer horizontalement le contenu */
+	align-items: center; /* Centrer verticalement le contenu */
+	height: 100%; /* Prendre toute la hauteur du parent */
+	width: 100%; /* Prendre toute la largeur du parent */
+	transition: width 2s ease, height 2s ease, margin 2s ease; /* Ajouter une transition pour les changements de largeur, hauteur et marge */
+}
+
+/* Définir le style pour le conteneur de la vidéo */
+.video-container {
+	width: 100%; /* Prendre toute la largeur du parent */
+	height: 100%; /* Prendre toute la hauteur du parent */
+}
+
+/* Définir le style pour l'élément vidéo */
+video {
+	width: 100%; /* Prendre toute la largeur du parent */
+	height: 100%; /* Prendre toute la hauteur du parent */
+	object-fit: cover; /* Couper la vidéo pour remplir le conteneur tout en maintenant les proportions */
+}
+
+/* Définir le style pour le conteneur principal de la vidéo lorsqu'il est réduit */
+.video_container_container.shrink {
+	width: 70%; /* Réduire la largeur à 70% */
+	height: auto; /* Ajuster la hauteur automatiquement */
+	justify-content: center; /* Centrer horizontalement le contenu */
+	margin-left: 15%; /* Ajouter une marge gauche pour centrer le conteneur */
+	margin-bottom: 0; /* Remettre la marge inférieure à 0 */
+}
