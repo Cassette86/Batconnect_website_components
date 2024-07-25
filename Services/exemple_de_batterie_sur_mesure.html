@@ -1,0 +1,131 @@
+<style>
+    /* Conteneur principal pour la mise en page horizontale */
+    .container_exemple {
+      display: flex; /* Utilise Flexbox pour aligner les éléments horizontalement */
+      flex-direction: row; /* Aligne les éléments en ligne (horizontalement) */
+      align-items: center; /* Centre les éléments verticalement dans le conteneur */
+      justify-content: center; /* Centre les éléments horizontalement */
+      gap: 20px; /* Ajoute un espace entre les éléments enfants */
+    }
+  
+    /* Style des images à l'intérieur du conteneur */
+    .container_exemple img {
+      height: 700px; /* Définit la hauteur des images */
+      object-fit: contain; /* Maintient les proportions de l'image tout en la contenant dans le conteneur */
+    }
+  
+    /* Style du tableau de caractéristiques */
+    .tableauv3 {
+      border-radius: 10px; /* Ajoute des coins arrondis au tableau */
+      border: solid 2px #ebebeb; /* Définit une bordure solide de 2px avec une couleur grise */
+      width: 70%; /* Définit la largeur du tableau à 70% du conteneur parent */
+    }
+  
+    /* Style des lignes du tableau */
+    .lignev2 {
+      border-bottom: solid 1px #ebebeb; /* Ajoute une bordure inférieure grise aux lignes */
+      display: flex; /* Utilise Flexbox pour aligner les éléments horizontalement */
+      justify-content: space-between; /* Répartit l'espace entre les éléments enfants */
+      gap: 20px; /* Ajoute un espace entre les éléments enfants */
+      padding: 0px 20px; /* Ajoute un espacement intérieur horizontal */
+    }
+  
+    /* Style des paragraphes dans les lignes du tableau */
+    .lignev2 p, .double_ligne_complexe p {
+      padding-top: 15px; /* Ajoute un espacement supérieur aux paragraphes */
+      width: 50%; /* Définit la largeur des paragraphes à 50% */
+    }
+  
+    /* Style pour les lignes complexes du tableau */
+    .ligne_complexe {
+      display: flex; /* Utilise Flexbox pour aligner les éléments horizontalement */
+      flex-direction: column; /* Aligne les éléments en colonne */
+      width: 50%; /* Définit la largeur de la colonne à 50% */
+      padding-bottom: 15px; /* Ajoute un espacement inférieur */
+    }
+  
+    /* Style pour les doubles lignes complexes du tableau */
+    .double_ligne_complexe {
+      display: flex; /* Utilise Flexbox pour aligner les éléments horizontalement */
+      gap: 20px; /* Ajoute un espace entre les éléments enfants */
+      padding: 0px 20px; /* Ajoute un espacement intérieur horizontal */
+    }
+  
+    /* Styles pour les ajustements sur petits écrans */
+    @media(max-width: 1000px) {
+      .container_exemple {
+        flex-direction: column; /* Change l'alignement des éléments en colonne sur petits écrans */
+      }
+      .tableauv3 {
+        width: 100%; /* Définit la largeur du tableau à 100% du conteneur parent */
+      }
+      .container_exemple img {
+        height: 300px; /* Réduit la hauteur des images sur petits écrans */
+        width: 100%; /* Définit la largeur des images à 100% du conteneur parent */
+      }
+    }
+  </style>
+  
+  <div class="container_exemple">
+    <!-- Conteneur pour le tableau des caractéristiques -->
+    <div class="tableauv3">
+      <!-- Ligne du tableau avec fond gris -->
+      <div class="lignev2" style="background: #ebebeb">
+        <p>Type de batterie</p>
+        <p>NMC</p>
+      </div> 
+      <!-- Autres lignes du tableau -->
+      <div class="lignev2">
+        <p>Tension nominale</p>
+        <p>43.2 V</p>
+      </div> 
+      <div class="lignev2" style="background: #ebebeb">
+        <p>Capacité nominale</p>
+        <p>19.5 Ah</p>
+      </div> 
+      <div class="lignev2">
+        <p>Energie nominale</p>
+        <p>18.4 kWh</p>
+      </div> 
+      <div class="lignev2" style="background: #ebebeb">
+        <p>Plage de tension</p>
+        <p>36 V - 51 V</p>
+      </div> 
+      <div class="lignev2">
+        <p>Qualité de cellule</p>
+        <p>Grade A</p>
+      </div> 
+      <div class="lignev2" style="background: #ebebeb">
+        <p>Nombre de cycles</p>
+        <div class="ligne_complexe">
+          <p>2000 @ 5C 25°C</p>
+          <p>1750 @ 5C 40°C</p>
+        </div>
+      </div>
+      <div class="lignev2">
+        <p>Protection IP</p>
+        <p>IP 65</p>
+      </div>
+      <div class="double_ligne_complexe" style="background: #ebebeb">
+        <p>Courant de charge Max., T°>25°C</p>
+        <p>10C, 180 A</p>
+      </div>
+      <div class="lignev2" style="background: #ebebeb">
+        <p>Pulse de charge Max., SOC>20%,T°>25°C</p>
+        <p>25C, 450 A (10s)</p>
+      </div>
+      <div class="double_ligne_complexe">
+        <p>Courant de décharge Max., T°>25°C</p>
+        <p>10C, 180 A</p>
+      </div>
+      <div class="double_ligne_complexe">
+        <p>Pulse de décharge Max., SOC>20%,T°>25°C</p>
+        <p>25C, 450 A (10s)</p>
+      </div>
+    </div>
+    <!-- Conteneur pour l'image associée -->
+    <div style="display: flex; justify-content: center;">
+      <img src="https://batconnect.fr/wp-content/uploads/2024/06/6-batterie-20Ah-1.png" style="width: 75%;">
+    </div>
+  </div>
+  
