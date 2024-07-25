@@ -1,0 +1,164 @@
+.postes_container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3%;
+}
+
+.poste_container {
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
+    text-align: justify;
+    transition: all 0.5s ease;
+    width: 31.3333333333%;
+    box-sizing: border-box;
+    margin-top: 60px;
+    position: relative;
+}
+.poste_container h5{
+text-align:start;
+}
+
+.details_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.label_poste {
+    padding: 5px 15px;
+    border-radius: 200px;
+    border: solid 2px #375BA7;
+}
+
+.poste_container:hover {
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.3);
+}
+
+.poste_trouve {
+    background: #ebebeb;
+    color: #bababa;
+    box-shadow: 0px 0px 1em rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.5s ease, background 0.5s ease;
+}
+
+.poste_trouve h5,
+.poste_trouve .details_container p,
+.poste_trouve .label_poste {
+    color: #bababa;
+    border-color: #bababa;
+}
+
+.poste_trouve .bouton_bat_encadre {
+    background-color: transparent;
+    color: #bababa;
+    border-color: #bababa;
+    pointer-events: none;
+}
+
+.texte_trouve {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    font-size: 16px;
+    color: white;
+    background-color: rgba(55, 91, 167, 0.8);
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 1;
+    text-align: center;
+}
+
+.texte_trouve img {
+    display: block;
+    margin: 0 auto;
+}
+
+.button_container_poste {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    justify-content: flex-start;
+    font-size: 16px;
+}
+
+.button_trouve {
+    color: rgba(55, 91, 167, 0.5);
+    position: relative;
+}
+
+.button_trouve img {
+    width: 9px;
+    height: 16px;
+    opacity: 0;
+    position: absolute;
+    left: 120%;
+    top: 20%;
+    transition: opacity 0.5s ease;
+}
+
+.bouton_bat {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+      cursor: pointer;
+}
+
+.bouton_bat_encadre {
+    margin-right: 20px;
+    position: relative;
+    background-color: transparent;
+    color: #375BA7;
+    padding: 10px 20px;
+    border: 2px solid #375BA7;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    margin-right: 20px;
+    margin-bottom: 0px;
+}
+
+.bouton_bat_encadre::after {
+    content: url('https://batconnect.fr/wp-content/uploads/2024/05/Vector.png');
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 65%;
+    right: 10px;
+    transform: translateY(-70%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+      cursor: pointer;
+}
+
+.bouton_bat_encadre:hover {
+    background-color: #ebebeb;
+    padding: 10px 36px 10px 20px;
+    border: 2px solid #ebebeb;
+}
+
+.bouton_bat_encadre:hover::after {
+    opacity: 1;
+}
+
+@media (max-width: 980px) {
+    .poste_container {
+        width: 45%;
+    }
+
+    .postes_container {
+        gap: 5%;
+    }
+}
+
+@media (max-width: 750px) {
+    .poste_container {
+        width: 100%;
+    }
+}
