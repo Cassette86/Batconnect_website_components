@@ -1,0 +1,151 @@
+/* Style pour le conteneur du carrousel */
+.carrousel {
+    margin-top: 80px;
+  }
+  
+  /* Conteneur des images du carrousel avec défilement horizontal */
+  .image-container {
+    overflow-x: scroll; /* Activer le défilement horizontal */
+    white-space: nowrap; /* Empêcher les images de se casser en ligne suivante */
+    -ms-overflow-style: none; /* Supprimer la barre de défilement sur IE et Edge */
+    scrollbar-width: none; /* Supprimer la barre de défilement sur Firefox */
+    z-index: 10; /* Assurer que le conteneur reste au-dessus des autres éléments */
+    position: relative; /* Positionner l'élément relativement */
+  }
+
+  /* Style pour les images du carrousel */
+  .image-container img {
+    display: inline-block; /* Affichage en ligne pour permettre le défilement */
+    margin-right: 7%; /* Marge droite entre les images */
+    box-shadow: 0px 0px 1em rgba(0, 0, 0, 0.1); /* Ombre légère autour des images */
+    transition: margin-left 1s ease; /* Transition pour le changement de marge */
+    width: 506px; /* Largeur fixe pour les images */
+    height: 320px; /* Hauteur fixe pour les images */
+    border-radius: 8px; /* Bords arrondis pour les images */
+    object-fit: cover; /* Les images couvrent le conteneur en conservant les proportions */
+    cursor: pointer; /* Curseur en forme de main pour indiquer l'interactivité */
+  }
+
+  /* Effet au survol des images */
+  .image-container img:hover {
+    box-shadow: 0px 0px 1em rgba(0, 0, 0, 0.2); /* Ombre plus prononcée */
+    opacity: 0.8; /* Réduire l'opacité */
+    transition: opacity 0.3s ease, box-shadow 0.3s ease; /* Transition fluide pour l'effet */
+  }
+
+  /* Première image avec marge à gauche */
+  .image-container img:first-child {
+    margin-left: 50%; /* Déplacer la première image vers la droite */
+  }
+
+  /* Conteneur pour les flèches de navigation */
+  .arrow_container {
+    margin-top: 40px;
+    display: flex; /* Utiliser flexbox pour aligner les flèches */
+    gap: 20px; /* Espace entre les flèches */
+    align-self: center; /* Centrer les flèches */
+    margin-left: 50%; /* Déplacer le conteneur des flèches vers la droite */
+  }
+
+  /* Style pour les flèches de navigation */
+  .arrow {
+    display: flex;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%; /* Flèches circulaires */
+    background-color: #ebebeb; /* Couleur de fond des flèches */
+    justify-content: center; /* Centrer le contenu horizontalement */
+    align-items: center; /* Centrer le contenu verticalement */
+    transition: opacity 0.5s ease; /* Transition pour l'opacité */
+    border: 0px; /* Pas de bordure */
+  }
+
+  /* Effet au survol des flèches */
+  .arrow:hover {
+    box-shadow: 0px 0px 1em rgba(0, 0, 0, 0.1); /* Ombre légère */
+    cursor: pointer; /* Curseur en forme de main */
+  }
+
+  /* Effet lors du clic sur les flèches */
+  .arrow:active {
+    box-shadow: inset 0em 0.5em 0.5em rgba(0, 0, 0, 0.1); /* Ombre interne */
+  }
+
+  /* Conteneur du texte associé aux images */
+  .text_container {
+    margin-left: 10%;
+    height: 250px;
+    width: 30%;
+    overflow: hidden; /* Cacher le texte débordant */
+    position: absolute; /* Positionner absolument */
+    top: 0px; /* Aligner en haut */
+  }
+
+  /* Conteneur pour le texte */
+  .text-wrap {
+    transition-property: margin-top; /* Transition pour le changement de marge */
+    transition-duration: 1s; /* Durée de la transition */
+    transition-timing-function: cubic-bezier(0.55, 0, 0.1, 1); /* Fonction de timing pour la transition */
+  }
+
+  /* Style pour chaque partie du texte */
+  .text_part {
+    color: #333; /* Couleur du texte */
+    text-align: justify; /* Justifier le texte */
+    margin-bottom: 0px; /* Pas de marge en bas */
+    width: 100%; /* Largeur complète */
+    height: 320px; /* Hauteur fixe */
+    display: flex;
+    flex-direction: column; /* Disposition en colonne */
+    align-items: flex-start; /* Aligner à gauche */
+    justify-content: center; /* Centrer verticalement */
+    gap: 20px; /* Espace entre les éléments */
+    transition: opacity 1s ease; /* Transition pour l'opacité */
+  }
+
+  /* Style pour les titres dans les parties de texte */
+  .text_part h3 {
+    font-size: clamp(1.25rem, 3vw, 1.5em); /* Taille de police adaptative */
+    margin: 0; /* Pas de marge */
+    text-align: start; /* Aligner le texte à gauche */
+  }
+
+  /* Style pour les paragraphes dans les parties de texte */
+  .text_part p {
+    font-size: clamp(1rem, 2vw, 1rem); /* Taille de police adaptative */
+    margin: 0; /* Pas de marge */
+  }
+
+  /* Styles pour les écrans de moins de 980px de large */
+  @media (max-width: 980px) {
+    .carrousel {
+      display: flex;
+      flex-direction: column; /* Disposer en colonne */
+      margin: 0px 10%;
+      margin-top: 0px;
+    }
+
+    .text_container {
+      position: relative; /* Positionner relativement */
+      width: 100%; /* Largeur complète */
+      margin-left: 0%; /* Pas de marge à gauche */
+    }
+
+    .image-container img:first-child {
+      margin-left: 0px; /* Pas de marge à gauche */
+    }
+
+    .image-container img {
+      margin-left: 0px; /* Pas de marge à gauche */
+      margin-right: 7%; /* Marge à droite */
+    }
+  }
+
+  /* Styles pour les écrans de moins de 780px de large */
+  @media (max-width: 780px) {
+    .image-container img {
+      width: 80%; /* Largeur à 80% */
+      height: auto; /* Hauteur automatique */
+      aspect-ratio: 1.85 / 1; /* Ratio d'aspect pour les images */
+    }
+  }
