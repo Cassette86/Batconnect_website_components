@@ -1,0 +1,43 @@
+/* Container style to hold all columns */
+.container {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow wrapping of columns to new lines */
+    justify-content: space-between; /* Space out columns evenly */
+    gap: 8%; /* Gap between columns */
+    text-align: justify; /* Justify text within columns */
+    width: 100%; /* Full width container */
+}
+
+/* Style for each column */
+.column {
+    width: 46%; /* Width of each column */
+    margin-bottom: 20px; /* Space below each column */
+}
+
+/* Add padding to the top of the last two columns */
+.column:nth-last-of-type(1),
+.column:nth-last-of-type(2) {
+    padding-top: 20px;
+}
+
+/* Style for headers within columns */
+h4 {
+    text-align: start; /* Left align headers */
+}
+
+/* Responsive design adjustments for screens less than or equal to 768px */
+@media screen and (max-width: 768px) {
+    .container {
+        gap: 15px; /* Reduce gap between columns */
+    }
+
+    .column {
+        width: 100%; /* Make columns full width */
+    }
+  
+    /* Remove top padding for the last two columns in smaller screens */
+    .column:nth-last-of-type(1),
+    .column:nth-last-of-type(2) {
+        padding-top: 0px;
+    }
+}
