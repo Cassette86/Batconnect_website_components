@@ -1,0 +1,133 @@
+<style>
+  /* Conteneur principal pour les domaines */
+  .domaine_container {
+    display: flex; /* Utilise Flexbox pour aligner les éléments enfants */
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne suivante si nécessaire */
+    gap: 2%; /* Espacement entre les éléments */
+  }
+
+  /* Style pour chaque domaine */
+  .choix_domaine {
+    position: relative; /* Permet de positionner des éléments enfants en absolu */
+    height: 265px; /* Hauteur fixe des blocs domaine */
+    padding: 3.5%; /* Espacement intérieur des blocs */
+    width: 32%; /* Largeur de chaque bloc domaine */
+    margin-bottom: 30px; /* Marge en bas pour espacer les blocs */
+    align-items: center; /* Centre les éléments verticalement */
+    display: flex; /* Utilise Flexbox pour l'alignement des éléments */
+    justify-content: center; /* Centre les éléments horizontalement */
+    text-align: center; /* Centre le texte à l'intérieur des blocs */
+  }
+
+  /* Effets de filtre pour les arrière-plans */
+  .choix_domaine::before {
+    content: ""; /* Contenu vide pour l'élément avant */
+    position: absolute; /* Positionnement absolu pour l'arrière-plan */
+    top: 0; /* Position en haut du conteneur */
+    left: 0; /* Position à gauche du conteneur */
+    width: 100%; /* Largeur à 100% du conteneur */
+    height: 100%; /* Hauteur à 100% du conteneur */
+    background-size: cover; /* Couvre l'intégralité du conteneur */
+    filter: blur(0px) brightness(100%); /* Filtre par défaut sans flou ni ajustement de luminosité */
+    transition: filter 0.5s; /* Transition douce pour les changements de filtre */
+    z-index: -1; /* Place l'arrière-plan derrière le contenu */
+  }
+
+  /* Styles pour les arrière-plans des différents domaines */
+  .voiturettes::before {
+    background-image: url("https://batconnect.fr/wp-content/uploads/2024/07/golfette.png"); /* Image de fond pour les voiturettes */
+    background-position: center right; /* Position de l'image */
+  }
+
+  .gse-forclift::before {
+    background-image: url("https://batconnect.fr/wp-content/uploads/2024/07/forklift_et_GSE-2.png"); /* Image de fond pour GSE et Forklift */
+    background-position: 70% center; /* Position de l'image */
+  }
+
+  .nautisme::before {
+    background-image: url("https://batconnect.fr/wp-content/uploads/2024/07/nautique-1.png"); /* Image de fond pour le nautisme */
+    background-position: center center; /* Position de l'image */
+  }
+
+  .nettoyage-industriel::before {
+    background-image: url("https://batconnect.fr/wp-content/uploads/2024/07/autolaveuse-paysage.png"); /* Image de fond pour le nettoyage industriel */
+    background-position: bottom center; /* Position de l'image */
+  }
+
+  .robotique::before {
+    background-image: url("https://batconnect.fr/wp-content/uploads/2024/06/4.png"); /* Image de fond pour la robotique */
+    background-position: center; /* Position de l'image */
+  }
+
+  .solaire::before {
+    background-image: url("https://batconnect.fr/wp-content/uploads/2024/06/2-2.png"); /* Image de fond pour le solaire */
+  }
+
+  /* Style pour les titres des domaines */
+  .choix_domaine h2 {
+    opacity: 0; /* Texte invisible par défaut */
+    color: #FFFFFF; /* Couleur du texte */
+    transition: opacity 0.3s ease; /* Transition douce pour l'opacité du texte */
+    position: relative; /* Position relative pour l'élément de titre */
+    z-index: 1; /* Place le texte au-dessus de l'arrière-plan */
+    text-align: center; /* Centre le texte */
+    font-weight: 500; /* Poids de la police légèrement gras */
+  }
+
+  /* Effets de survol pour les blocs domaine */
+  .choix_domaine:hover::before {
+    filter: blur(1.5px) brightness(50%); /* Flou et réduction de la luminosité au survol */
+  }
+
+  /* Effets de survol pour les titres des blocs domaine */
+  .choix_domaine:hover h2 {
+    opacity: 1; /* Rendre le texte visible au survol */
+  }
+
+  /* Styles réactifs pour les écrans plus petits */
+  @media(max-width: 980px) {
+    .choix_domaine {
+      width: 49%; /* Réduit la largeur des blocs à 49% pour les écrans plus petits */
+    }
+  }
+
+  @media(max-width: 750px) {
+    .choix_domaine {
+      width: 100%; /* Largeur complète des blocs pour les écrans plus petits */
+      height: 200px; /* Hauteur ajustée pour les écrans plus petits */
+      padding: 8%; /* Espacement intérieur ajusté pour les écrans plus petits */
+    }
+  }
+
+  @media(max-width: 450px) {
+    .choix_domaine {
+      width: 100%; /* Largeur complète des blocs pour les écrans encore plus petits */
+      height: 150px; /* Hauteur ajustée pour les écrans très petits */
+      padding: 10%; /* Espacement intérieur ajusté pour les écrans très petits */
+    }
+    .choix_domaine h2 {
+      font-size: 16px; /* Taille de police réduite pour les écrans très petits */
+    }
+  }
+</style>
+
+<div class="domaine_container">
+  <a href="https://batconnect.fr/batterie-voiturette-golf/" class="choix_domaine voiturettes">
+    <h2>Voiturettes</h2>
+  </a>
+  <a href="https://batconnect.fr/gse-forklift/" class="choix_domaine gse-forclift">
+    <h2>GSE et Forklift</h2>
+  </a>
+  <a href="https://batconnect.fr/solutions-nautisme/" class="choix_domaine nautisme">
+    <h2>Nautisme</h2>
+  </a>
+  <a href="https://batconnect.fr/nettoyage-industriel/" class="choix_domaine nettoyage-industriel">
+    <h2>Nettoyage industriel</h2>
+  </a>
+  <a href="https://batconnect.fr/robotique-agv-amr/" class="choix_domaine robotique">
+    <h2>Robotique</h2>
+  </a>
+  <a href="https://batconnect.fr/stockage-stationnaire/" class="choix_domaine solaire">
+    <h2>Solaire</h2>
+  </a>
+</div>
