@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet-src.js"></script>
+</head>
+
+<body data-rsssl=1 data-rsssl=1 data-rsssl=1 data-rsssl=1 data-rsssl=1 data-rsssl=1 data-rsssl=1 data-rsssl=1 data-rsssl=1>
+<div id="map" style="height: 400px;"></div>
+<script>
+var map = L.map('map').setView([43.538130, 1.369425], 15);
+L.control.scale({imperial: false}).addTo(map);
+
+L.tileLayer('https://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+attribution: '© <a href="https://osm.org/copyright" target="_blank" >OpenStreetMap</a> contributors'
+}).addTo(map);
+  
+var marker1 = L.marker([43.538130, 1.369425]).addTo(map);
+var marker2 = L.marker([43.538715, 1.361568]).addTo(map);
+
+var tooltip1 = L.tooltip({ direction: 'right', permanent: true }).setContent("Entrée Francazal");
+var tooltip2 = L.tooltip({ direction: 'left', permanent: true }).setContent("Batconnect");
+
+marker1.bindTooltip(tooltip1);
+marker2.bindTooltip(tooltip2);
+
+marker1.on('click', function() {
+    if (marker1.isTooltipOpen()) {
+        marker1.closeTooltip();
+    } else {
+        marker1.openTooltip();
+    }
+});
+
+marker2.on('click', function() {
+    if (marker2.isTooltipOpen()) {
+        marker2.closeTooltip();
+    } else {
+        marker2.openTooltip();
+    }
+});
+
+</script>
+</body>
+</html>
