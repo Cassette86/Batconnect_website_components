@@ -1,98 +1,159 @@
 <style>
+  /* Conteneur principal pour la section batterie */
   .battery_container {
-    display: flex; /* Arrange child elements side-by-side */
-    align-items: center; /* Center items vertically */
-    height: 400px; /* Fixed height for the container */
-    margin: 0; /* Remove default margin */
+    display: flex; /* Utilise Flexbox pour aligner les éléments horizontalement */
+    align-items: center; /* Centre les éléments verticalement */
+    height: 400px; /* Hauteur fixe du conteneur */
+    margin: 0; /* Marge par défaut */
   }
 
+  /* Style pour le texte de la batterie */
   .battery_text {
-    text-align: justify; /* Justify text within this container */
+    text-align: justify; /* Justifie le texte à l'intérieur du conteneur */
   }
 
-  .label_container {
-    display: flex; /* Arrange child elements side-by-side */
-    justify-content: space-around; /* Distribute space evenly around the labels */
-  }
-
-  .label {
-    padding: 5px 20px; /* Padding for the labels */
-    border-radius: 50px; /* Rounded corners */
-    border: solid 2px #375BA7; /* Border color and thickness */
-    margin-top: 30px; /* Space above the labels */
-  }
-
+  /* Conteneur pour l'image de la batterie */
   .battery_picture_container {
-    width: 50%; /* Half the width of the container */
-    height: 400px; /* Fixed height */
-    background-image: url("https://batconnect.fr/wp-content/uploads/2024/05/Duo-pack-batteries.png"); /* Background image */
-    background-size: cover; /* Cover the container */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* No repetition of the image */
+    width: 50%; /* Largeur de 50% du conteneur principal */
+    background-image: url("https://batconnect.fr/wp-content/uploads/2024/06/Pack-50Ah.png"); /* Image de fond */
+    height: 400px; /* Hauteur fixe du conteneur */
+    background-size: contain; /* Redimensionne l'image pour qu'elle soit entièrement visible */
+    background-position: center; /* Centre l'image dans le conteneur */
+    background-repeat: no-repeat; /* Évite la répétition de l'image */
   }
 
+  /* Conteneur pour l'image supplémentaire, caché par défaut */
   .battery_img_container {
-    display: none; /* Hidden by default */
-    width: 50%; /* Half the width of the container */
-    height: 400px; /* Fixed height */
+    display: none; /* Masque ce conteneur par défaut */
+    width: 50%; /* Largeur de 50% du conteneur principal */
+    height: 400px; /* Hauteur fixe du conteneur */
   }
 
+  /* Description de la batterie */
   .battery_description {
-    width: 50%; /* Half the width of the container */
+    width: 50%; /* Largeur de 50% du conteneur principal */
+    display: flex; /* Utilise Flexbox pour aligner les éléments */
+    flex-direction: column; /* Aligne les éléments verticalement */
+    gap: 40px; /* Espace entre les éléments */
+  }
+
+  /* Conteneur pour les boutons */
+  .buttons {
+    display: flex; /* Utilise Flexbox pour aligner les boutons */
+  }
+
+  /* Style de la colonne de gauche pour les boutons */
+  .button_column_left {
+    flex: 1; /* Prend une largeur flexible */
+    display: flex; /* Utilise Flexbox pour l'alignement des boutons */
+    justify-content: flex-end; /* Aligne les boutons à droite */
+    margin-left: 2.5%; /* Marge à gauche */
+    margin-right: 2.5%; /* Marge à droite */
+  }
+
+  /* Style de la colonne de droite pour les boutons */
+  .button_column_right {
+    flex: 1; /* Prend une largeur flexible */
+    display: flex; /* Utilise Flexbox pour l'alignement des boutons */
+    justify-content: flex-start; /* Aligne les boutons à gauche */
+    margin-left: 2.5%; /* Marge à gauche */
+    margin-right: 2.5%; /* Marge à droite */
+  }
+
+  /* Style des boutons encadrés */
+  .bouton_bat_encadre {
+    text-align: center; /* Centre le texte à l'intérieur des boutons */
+    margin-right: 20px; /* Marge à droite des boutons */
+    position: relative; /* Position relative pour les effets de survol */
+    background-color: transparent; /* Fond transparent */
+    color: #375BA7; /* Couleur du texte */
+    padding: 10px 20px; /* Espacement intérieur des boutons */
+    border: 2px solid #375BA7; /* Bordure colorée */
+    border-radius: 5px; /* Bords arrondis */
+    font-size: 16px; /* Taille de la police */
+    transition: all 0.3s ease; /* Transition douce pour les changements */
+    box-sizing: border-box; /* Inclut la bordure et le padding dans la largeur et la hauteur */
+    margin-bottom: 0px; /* Marge en bas */
+  }
+
+  /* Effet de survol pour les boutons encadrés */
+  .bouton_bat_encadre:hover {
+    background-color: #ebebeb; /* Changement de fond au survol */
+    border: 2px solid #ebebeb; /* Changement de bordure au survol */
+  }
+
+  /* Styles réactifs pour les écrans plus petits */
+  @media screen and (max-width: 600px) {
+    .buttons {
+      flex-direction: column; /* Aligne les boutons verticalement */
+    }
+    .button_column_right {
+      flex: auto; /* Largeur flexible pour la colonne droite */
+      justify-content: center; /* Centre les boutons dans la colonne droite */
+    }
+    .button_column_left {
+      flex: auto; /* Largeur flexible pour la colonne gauche */
+      justify-content: center; /* Centre les boutons dans la colonne gauche */
+      margin-bottom: 20px; /* Marge en bas de la colonne gauche */
+    }
   }
 
   @media(max-width: 980px) {
     .battery_container {
-      flex-direction: column; /* Stack elements vertically */
-      height: auto; /* Adjust height automatically */
+      flex-direction: column; /* Aligne les éléments verticalement pour les petits écrans */
+      height: auto; /* Ajuste la hauteur du conteneur */
     }
 
     .battery_description, .battery_picture_container, .battery_img_container {
-      width: 100%; /* Full width */
-      height: auto; /* Adjust height automatically */
+      width: 100%; /* Largeur complète pour les éléments */
+      height: auto; /* Ajuste la hauteur */
     }
 
     .battery_text {
-      margin-top: 20px; /* Space above the text */
+      margin-top: 20px; /* Marge en haut du texte */
     }
 
     .battery_picture_container {
-      margin-top: 20px; /* Space above the picture container */
-      height: 400px; /* Fixed height */
+      margin-top: 20px; /* Marge en haut de l'image */
+      height: 400px; /* Ajuste la hauteur pour les petits écrans */
     }
   }
 
   @media(max-width: 600px) {
     .battery_picture_container {
-      display: none; /* Hide the picture container */
+      display: none; /* Masque le conteneur de l'image de fond pour les petits écrans */
     }
     .battery_img_container {
-      display: block; /* Show the img container */
+      display: block; /* Affiche le conteneur de l'image supplémentaire pour les petits écrans */
     }
   }
 </style>
-  
+
 <div class="battery_container">
   <div class="battery_description">
     <div class="battery_text">
       <h2 style="margin-bottom: 20px">
-        Nos batteries connectées
+        Pack 48 V - 50 A<span style="text-transform: lowercase;">h</span>
       </h2>
-      <p style="margin-bottom: 20px">
-        Nous avons conçu chaque aspect de nos batteries avec soin pour offrir des performances optimales. Nos batteries de <strong>conception </strong>française sont adaptable sur tout type de véhicules légers. 
-      </p>
-      <p>
-        Avec notre <strong>support local dédié</strong>, vous bénéficiez d'une assistance rapide et efficace.
-      </p>
+      <h5>
+        Besoin d'autonomie modéré
+      </h5>
     </div>
-    <div class="label_container">
-      <div class="label">
-        48 V - 50 Ah
+    <div class="buttons">
+      <div class="button_column_left">
+        <a class="bouton_bat_encadre" href="https://batconnect.fr/devis/">
+          Demandez un devis
+        </a>
       </div>
-      <div class="label">
-        48 V - 105 Ah
+      <div class="button_column_right">
+        <a class="bouton_bat_encadre" href="#" onclick="window.open('https://batconnect.fr/wp-content/uploads/2024/06/Batconnect_50Ah_datasheet_FR.pdf', '_blank')">
+          Télécharger la fiche technique
+        </a>
       </div>
     </div>
   </div>	 
-  <div class="battery_img_container"><img src="https://batconnect.fr/wp-content/uploads/2024/05/Duo-pack-batteries.png"></div>
+  <div class="battery_picture_container"></div>
+  <div class="battery_img_container">
+    <!-- Place for an additional image, if necessary -->
+  </div>
 </div>
