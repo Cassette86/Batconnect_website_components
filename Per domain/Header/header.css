@@ -1,0 +1,104 @@
+  /* Conteneur principal pour la section hero */
+  .hero_container {
+    position: relative; /* Positionnement relatif pour le placement absolu des éléments enfants */
+    overflow: hidden; /* Assure que le contenu ne dépasse pas du conteneur */
+  }
+
+  /* Style pour les paragraphes dans le conteneur hero */
+  .hero_container p {
+    text-align: justify; /* Justifie le texte pour un alignement uniforme */
+  }
+
+  /* Style pour l'image d'arrière-plan */
+  .hero_container img {
+    position: absolute; /* Positionnement absolu pour superposer l'image sur le contenu */
+    right: 0%; /* Positionne l'image à droite */
+    height: 100%; /* L'image couvre toute la hauteur du conteneur */
+    width: 100%; /* L'image couvre toute la largeur du conteneur */
+    object-fit: cover; /* Ajuste l'image pour couvrir le conteneur sans déformer l'image */
+    object-position: right; /* Aligne l'image à droite */
+  }
+
+  /* Style pour le contenu de la section hero */
+  .hero_content {
+    position: relative; /* Positionnement relatif pour que le contenu soit superposé sur l'image */
+    padding: 40px 0; /* Ajoute un espacement vertical autour du contenu */
+    z-index: 1; /* Assure que le contenu est au-dessus de l'image */
+    box-sizing: border-box; /* Inclut les bordures et le padding dans la largeur totale */
+  }
+
+  /* Style pour la première partie du contenu */
+  .hero_content_part1 {
+    width: 60%; /* Définit la largeur de la première partie du contenu */
+    text-align: justify; /* Justifie le texte */
+  }
+
+  /* Style pour la deuxième partie du contenu */
+  .hero_content_part2 {
+    width: 55%; /* Définit la largeur de la deuxième partie du contenu */
+    text-align: justify; /* Justifie le texte */
+  }
+
+  /* Marges inférieures pour les titres et les paragraphes */
+  .hero_content_part1 h1, .hero_content_part1 p, .hero_content_part2 p {
+    margin-bottom: 50px; /* Espace sous les éléments */
+  }
+
+  /* Adaptation du style pour les écrans plus petits */
+  @media (max-width: 2000px) {
+    .hero_container img {
+      right: 0%; /* Ajuste la position de l'image pour les écrans plus petits */
+    }
+    .hero_content_part1 {
+      width: 55%; /* Réduit la largeur de la première partie */
+    }
+    .hero_content_part2 {
+      width: 50%; /* Réduit la largeur de la deuxième partie */
+    }
+  }
+
+  @media (max-width: 1500px) {
+    .hero_container img {
+      right: -7%; /* Ajuste la position de l'image */
+    }
+    .hero_content_part1 {
+      width: 45%; /* Réduit davantage la largeur de la première partie */
+    }
+    .hero_content_part2 {
+      width: 40%; /* Réduit davantage la largeur de la deuxième partie */
+    }
+  }
+
+  @media (max-width: 1300px) {
+    .hero_container img {
+      right: -10%; /* Ajuste la position de l'image */
+    }
+  }
+
+  @media (max-width: 1250px) {
+    .hero_container img {
+      right: -18%; /* Ajuste la position de l'image */
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .hero_container img {
+      display: none; /* Masque l'image sur les petits écrans */
+    }
+    .hero_content_part1, .hero_content_part2 {
+      width: 100%; /* Prend toute la largeur disponible */
+    }
+    .hero_content_part2 p {
+      width: 100%; /* Assure que les paragraphes utilisent toute la largeur */
+      margin: 0; /* Supprime les marges */
+    }
+    .hero_content h1, .hero_content p {
+      margin-bottom: 20px; /* Réduit l'espacement sous les éléments */
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    h1 {
+      font-size: 25px; /* Réduit la taille de la police des titres pour les très petits écrans */
+    }
+  }
