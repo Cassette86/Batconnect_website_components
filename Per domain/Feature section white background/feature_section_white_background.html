@@ -1,0 +1,71 @@
+<style>
+  /* Conteneur principal des fonctionnalités */
+  .feature_container {
+    display: flex; /* Utilisation de Flexbox pour un alignement flexible des éléments */
+    gap: 20px; /* Espacement entre les éléments */
+    align-items: start; /* Aligne les éléments au début du conteneur */
+    justify-content: space-between; /* Distribue les éléments avec de l'espace entre eux */
+  }
+  
+  /* Conteneur principal pour chaque fonctionnalité */
+  .feature_component {
+    display: flex; /* Utilisation de Flexbox pour aligner les éléments à l'intérieur */
+    align-items: center; /* Aligne les éléments au centre verticalement */
+  }
+
+  /* Conteneur pour l'image de chaque fonctionnalité */
+  .feature_image {
+    margin-right: 20px; /* Marge à droite pour espacer l'image du texte */
+  } 
+
+  /* Style pour l'image dans le conteneur de l'image */
+  .feature_image img {
+    max-width: none; /* Pas de restriction sur la largeur maximale de l'image */
+  }
+  
+  /* Adaptation du style pour les écrans plus petits */
+  @media (max-width: 600px) {
+    .feature_container {
+      display: flex; /* Flexbox pour aligner les éléments en colonne sur les petits écrans */
+      flex-direction: column; /* Dispose les éléments en colonne */
+      padding: 0px 10%; /* Ajoute du padding horizontal pour une meilleure présentation */
+    }
+
+    .feature_component {
+      display: flex; /* Flexbox pour aligner les éléments à l'intérieur de chaque fonctionnalité */
+      width: 100%; /* Prend toute la largeur disponible */
+    }
+  }
+</style>
+
+<div class="feature_container">
+  <!-- Première fonctionnalité -->
+  <div class="feature_component"> <!-- Conteneur principal pour cette fonctionnalité -->
+    <div class="feature_image"> <!-- Conteneur de l'image pour cette fonctionnalité -->
+      <img src="https://batconnect.fr/wp-content/uploads/2024/06/Sans-entretien.png" alt="Icone sans entretien" /> <!-- Image du feature avec texte alternatif -->
+    </div>
+    <div class="feature_text"> <!-- Conteneur du texte pour cette fonctionnalité -->
+      <h5>Sans entretien</h5> <!-- Titre de la fonctionnalité -->
+    </div>
+  </div>
+  
+  <!-- Deuxième fonctionnalité -->
+  <div class="feature_component"> <!-- Conteneur principal pour cette fonctionnalité -->
+    <div class="feature_image"> <!-- Conteneur de l'image pour cette fonctionnalité -->
+      <img src="https://batconnect.fr/wp-content/uploads/2024/06/Gestion-flotte-voiturette.png" alt="Icone gestion de flotte" /> <!-- Image du feature avec texte alternatif -->
+    </div>
+    <div class="feature_text"> <!-- Conteneur du texte pour cette fonctionnalité -->
+      <h5>Gestion de flotte optimisée</h5> <!-- Titre de la fonctionnalité -->
+    </div>
+  </div>
+  
+  <!-- Troisième fonctionnalité -->
+  <div class="feature_component"> <!-- Conteneur principal pour cette fonctionnalité -->
+    <div class="feature_image"> <!-- Conteneur de l'image pour cette fonctionnalité -->
+      <img src="https://batconnect.fr/wp-content/uploads/2024/06/Garantie-10-ans.png" alt="Icone garantie 10 ans" /> <!-- Image du feature avec texte alternatif -->
+    </div>
+    <div class="feature_text"> <!-- Conteneur du texte pour cette fonctionnalité -->
+      <h5>Garantie jusqu'à 10 ans</h5> <!-- Titre de la fonctionnalité -->
+    </div>
+  </div>
+</div>
