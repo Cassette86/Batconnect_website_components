@@ -1,0 +1,66 @@
+<style>
+  /* Conteneur principal pour la mise en page de l'interlocuteur */
+  .interlocuteur_container {
+    display: flex; /* Utilise Flexbox pour aligner les éléments horizontalement */
+    gap: 40px; /* Ajoute un espace entre les éléments enfants */
+  }
+
+  /* Style pour l'image de l'interlocuteur */
+  .interlocuteur_image {
+    background-image: url("https://batconnect.fr/wp-content/uploads/2023/05/BatConnect-2022-8-scaled.jpg"); /* Image de fond */
+    width: 50%; /* Définit la largeur de l'image */
+    height: 400px; /* Définit la hauteur de l'image */
+    background-size: cover; /* Couvre le conteneur en gardant les proportions de l'image */
+    background-position: top center; /* Positionne l'image en haut au centre */
+    border-radius: 5px; /* Ajoute des coins arrondis */
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.5); /* Ajoute une ombre portée */
+  }
+
+  /* Style pour le contenu de l'interlocuteur */
+  .interlocuteur_content {
+    width: 50%; /* Définit la largeur du contenu */
+    text-align: start; /* Aligne le texte au début */
+  }
+
+  /* Marges inférieures pour les éléments textuels dans le contenu */
+  .interlocuteur_content h5, .interlocuteur_content h6, .interlocuteur_content p {
+    margin-bottom: 30px; /* Ajoute un espacement inférieur */
+  }
+  
+  /* Styles pour les écrans de moins de 980px de large */
+  @media (max-width: 980px) {
+    .interlocuteur_image {
+      height: 350px; /* Réduit la hauteur de l'image */
+      width: 50%; /* Maintient la largeur de l'image */
+    }
+    .interlocuteur_content {
+      width: 50%; /* Maintient la largeur du contenu */
+      text-align: start; /* Aligne le texte au début */
+    }
+  }
+
+  /* Styles pour les écrans de moins de 480px de large */
+  @media (max-width: 480px) {
+    .interlocuteur_image {
+      height: 180px; /* Réduit la hauteur de l'image */
+      width: 50%; /* Maintient la largeur de l'image */
+    }
+    .interlocuteur_content h5, .interlocuteur_content h6, .interlocuteur_content p {
+      margin-bottom: 0; /* Supprime l'espacement inférieur pour les petits écrans */
+    }
+    .interlocuteur_container {
+      margin-bottom: 20px; /* Ajoute un espacement inférieur au conteneur principal */
+    } 
+  }
+</style>
+
+<div class="interlocuteur_container">
+  <!-- Conteneur pour l'image de l'interlocuteur -->
+  <div class="interlocuteur_image" style="background-image: url('https://batconnect.fr/wp-content/uploads/2023/05/BatConnect-2022-8-scaled.jpg');"></div>
+  <!-- Conteneur pour le contenu textuel de l'interlocuteur -->
+  <div class="interlocuteur_content">
+    <h5>Jeremy Dulout</h5> <!-- Nom de l'interlocuteur -->
+    <h6>CEO et fondateur</h6> <!-- Titre de l'interlocuteur -->
+    <p><i>"Ensemble, associons performance économique, éco-conception et réindustrialisation"</i></p> <!-- Citation de l'interlocuteur -->
+  </div>
+</div>
